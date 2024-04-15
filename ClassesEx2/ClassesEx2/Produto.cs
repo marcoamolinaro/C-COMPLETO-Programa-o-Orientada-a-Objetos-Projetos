@@ -14,6 +14,16 @@ namespace ClassesEx2
             return Preco * Quantidade;
         }
 
+        public void AdicionarProdutos(int quantiade)
+        {
+            Quantidade += quantiade;
+        }
+
+        public void RemoverProdutos(int quantidade)
+        {
+            Quantidade -= quantidade;
+        }
+
         public override string ToString()
         {
             return Nome

@@ -17,7 +17,27 @@ namespace ClassesEx2
             Console.Write("Quantidade no estoque: ");
             produto.Quantidade = int.Parse(Console.ReadLine());
 
+            Console.WriteLine();
             Console.WriteLine("Dados do produto: " + produto);
+            Console.WriteLine();
+
+            Console.Write("Digite o número de produtos a ser adicionado ao estoque:");
+            int qtde = int.Parse(Console.ReadLine());
+
+            produto.AdicionarProdutos(qtde);
+            
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + produto);
+
+            Console.WriteLine();
+
+            Console.Write("Digite o número de produtos a ser removidos do estoque:");
+            qtde = int.Parse(Console.ReadLine());
+
+            produto.RemoverProdutos(qtde);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados atualizados: " + produto);
         }
     }
 }
