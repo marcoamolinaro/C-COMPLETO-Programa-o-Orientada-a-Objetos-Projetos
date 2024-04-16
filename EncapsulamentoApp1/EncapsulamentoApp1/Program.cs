@@ -30,6 +30,28 @@ namespace EncapsulamentoApp1
             Console.WriteLine();
             Console.WriteLine("Dados da Conta");
             Console.WriteLine(conta);
+
+            Console.WriteLine();
+            Console.Write("Entre o valor para depósito: ");
+            double quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            conta.Deposito(quantia);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados da Conta atualizados");
+            Console.WriteLine(conta);
+
+            Console.WriteLine();
+            Console.Write("Entre o valor para saque: ");
+            quantia = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+            conta.Saque(quantia);
+
+            Console.WriteLine();
+            Console.WriteLine("Dados da Conta atualizados");
+            Console.WriteLine(conta);
+
+
         }
     }
 }
