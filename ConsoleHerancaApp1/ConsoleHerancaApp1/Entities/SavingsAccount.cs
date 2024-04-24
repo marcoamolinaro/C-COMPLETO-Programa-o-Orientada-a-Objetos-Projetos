@@ -15,5 +15,10 @@ namespace ConsoleHerancaApp1.Entities
         {
             Balance += Balance * InterestRate;
         }
+
+        public override void WithDraw(double amount)
+        {
+            Balance -= amount;
+        }
     }
 }
