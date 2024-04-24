@@ -18,7 +18,8 @@ namespace ConsoleHerancaApp1.Entities
 
         public override void WithDraw(double amount)
         {
-            Balance -= amount;
+            base.WithDraw(amount);
+            Balance -= 2.00;
         }
     }
 }
