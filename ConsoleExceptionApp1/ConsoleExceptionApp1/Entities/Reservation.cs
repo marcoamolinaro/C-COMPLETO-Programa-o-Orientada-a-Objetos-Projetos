@@ -1,4 +1,4 @@
-﻿
+﻿using ConsoleExceptionApp1.Entities.Exceptions;
 
 namespace ConsoleExceptionApp1.Entities
 {
@@ -14,6 +14,11 @@ namespace ConsoleExceptionApp1.Entities
 
         public Reservation(int roomNumber, DateTime checkIn, DateTime checkOut)
         {
+            if (checkOut <= checkIn)
+            {
+                throw new DomainException("Check-out date must be greather than Check-in date!");
+            }
+
             RoomNumber = roomNumber;
             CheckIn = checkIn;
             CheckOut = checkOut;
@@ -27,6 +32,17 @@ namespace ConsoleExceptionApp1.Entities
 
         public void UpdateDates(DateTime checkIn, DateTime checkOut)
         {
+            DateTime now = DateTime.Now;
+
+            if (checkIn < now || checkOut < now)
+            {
+                throw new DomainException("Reservation dates must be futures dates");
+            }
+            else if (checkOut <= checkIn)
+            {
+                throw new DomainException("Check-out date must be greather than Check-in date!");
+            }
+
             CheckIn = checkIn;
             CheckOut = checkOut;
         }
