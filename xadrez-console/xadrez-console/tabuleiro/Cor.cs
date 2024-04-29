@@ -1,6 +1,6 @@
 ﻿
 
-namespace xtabuleiro
+namespace tabuleiro
 {
     enum Cor
     {
