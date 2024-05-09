@@ -10,13 +10,11 @@ namespace ConsoleFlieApp2
             string path =
                 @"D:\Desenvolvedor\Udemy\C#_COMPLETO_Programação_Orientada _a_Objetos_Projetos\temp\file1.txt";
 
-            FileStream fs = null;
             StreamReader sr = null;
 
             try
             {
-                fs = new FileStream(path, FileMode.Open);
-                sr = new StreamReader(fs);
+                sr = File.OpenText(path);
 
                 string line = sr.ReadLine();
                 Console.WriteLine(line);
@@ -29,7 +27,6 @@ namespace ConsoleFlieApp2
             finally
             {
                 if (sr != null) sr.Close();
-                if (fs != null) fs.Close();
             }
 
         }
