@@ -25,6 +25,8 @@ namespace ConsoleDirectoryApp1
                 {
                     Console.WriteLine(file);
                 }
+
+                Directory.CreateDirectory(path + @"\newfolder");
             }
             catch (IOException e) {
                 Console.WriteLine("An error occurred");
