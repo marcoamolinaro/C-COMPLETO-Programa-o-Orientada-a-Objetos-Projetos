@@ -18,6 +18,13 @@ namespace ConsoleDirectoryApp1
                 {
                     Console.WriteLine(folder);
                 }
+
+                var files = Directory.EnumerateFiles(path, "*.*", SearchOption.AllDirectories);
+                Console.WriteLine("FILES:");
+                foreach (string file in files)
+                {
+                    Console.WriteLine(file);
+                }
             }
             catch (IOException e) {
                 Console.WriteLine("An error occurred");
