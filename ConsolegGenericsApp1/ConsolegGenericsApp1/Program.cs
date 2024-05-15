@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            PrintService printService = new PrintService();
+            PrintService<int> printService = new PrintService<int>();
             Console.Write("How many values? ");
             int n = int.Parse(Console.ReadLine());
 
