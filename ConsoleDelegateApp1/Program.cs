@@ -15,7 +15,7 @@ namespace ConsoleDelegateApp1
             result = CalculationService.Max(a, b);
             Console.WriteLine(result);
 
-            result = CalculationService.Square(a, b);
+            result = CalculationService.Square(a);
             Console.WriteLine(result);
         }
     }

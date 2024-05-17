@@ -18,9 +18,9 @@ namespace ConsoleDelegateApp1.Services
             return x + y;
         }
 
-        public static double Square(double x, double y)
+        public static double Square(double x)
         {
-            return x * y;
+            return x * x;
         }
     }
 }
