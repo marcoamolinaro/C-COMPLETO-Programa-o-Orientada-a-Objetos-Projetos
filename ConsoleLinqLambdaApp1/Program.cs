@@ -59,6 +59,10 @@ namespace ConsoleLinqLambdaApp1
 
             var r7 = products.Where(p => p.Price > 3000.00).FirstOrDefault(); 
             Console.WriteLine("First or default test 2: " + r7);
+            Console.WriteLine();
+
+            var r8 = products.Where(p => p.Id == 3).SingleOrDefault();
+            Console.WriteLine("Single or Default test 1: " + r8);
 
 
         }
