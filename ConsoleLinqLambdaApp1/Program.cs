@@ -64,7 +64,8 @@ namespace ConsoleLinqLambdaApp1
             var r8 = products.Where(p => p.Id == 3).SingleOrDefault();
             Console.WriteLine("Single or Default test 1: " + r8);
 
-
+            var r9 = products.Where(p => p.Id == 30).SingleOrDefault();
+            Console.WriteLine("Single or Default test 2: " + r9);
         }
     }
 }
