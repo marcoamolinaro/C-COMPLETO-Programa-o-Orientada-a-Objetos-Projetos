@@ -51,6 +51,9 @@ namespace ConsoleLinqLambdaApp1
             var r4 = products.Where(p => p.Category.Tier == 1).OrderBy(p => p.Price).ThenBy(p => p.Name);
             Print("TIER 1 ORDER BY PRICE THEN BY NAME", r4);
 
+            var r5 = r4.Skip(2).Take(4);
+            Print("TIER 1 ORDER BY PRICE THEN BY NAME SKIP 2 TAKE 4", r5);
+
         }
     }
 }
