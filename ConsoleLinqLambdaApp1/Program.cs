@@ -57,7 +57,7 @@ namespace ConsoleLinqLambdaApp1
             var r6 = products.First();
             Console.WriteLine("First test 1: " + r6);
 
-            var r7 = products.Where(p => p.Price > 3000.00).First(); // Vai lançar erro pois vai retornar vazio
+            var r7 = products.Where(p => p.Price > 3000.00).FirstOrDefault(); 
             Console.WriteLine("First test 2: " + r7);
 
 
