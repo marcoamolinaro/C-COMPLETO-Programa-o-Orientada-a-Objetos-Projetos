@@ -73,6 +73,17 @@ namespace ConsoleLinqLambdaApp1
 
             var r11 = products.Min(p => p.Price);
             Console.WriteLine("Min price: " + r11);
+
+            var r12 = products.Where(p => p.Category.Id == 1).Sum(p => p.Price);
+            Console.WriteLine("Category 1 Sum Prices: " + r12);
+
+            var r13 = products.Where(p => p.Category.Id == 1).Average(p => p.Price);
+            Console.WriteLine("Category 1 Average Prices: " + r13);
+
+            var r14 = products.Where(p => p.Category.Id == 5).Select(p => p.Price).DefaultIfEmpty(0.0).Average();
+            Console.WriteLine("Category 5 Average Prices: " + r14);
+
+
         }
     }
 }
