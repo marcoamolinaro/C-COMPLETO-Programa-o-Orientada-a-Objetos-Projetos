@@ -41,7 +41,10 @@ namespace ConsoleLinqLambdaApp1
 
             var r1 = products.Where(p => p.Category.Tier == 1 && p.Price < 900.00);
             Print("TIER 1 AND PRICE < 900.00:", r1);
-            
+
+            var r2 = products.Where(p => p.Category.Name == "Tools").Select(p => p.Name);
+            Print("NAMES OF PRODUCTS FROM TOOLS", r2);
+
         }
     }
 }
