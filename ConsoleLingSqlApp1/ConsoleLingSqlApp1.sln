@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34902.65
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleLingSqlApp1", "ConsoleLingSqlApp1.csproj", "{725DD272-35EA-4B68-8DFD-FF2733957382}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{725DD272-35EA-4B68-8DFD-FF2733957382}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{725DD272-35EA-4B68-8DFD-FF2733957382}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{725DD272-35EA-4B68-8DFD-FF2733957382}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{725DD272-35EA-4B68-8DFD-FF2733957382}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E761E4A2-A6FA-47FF-B6E7-732498520DE2}
+	EndGlobalSection
+EndGlobal
