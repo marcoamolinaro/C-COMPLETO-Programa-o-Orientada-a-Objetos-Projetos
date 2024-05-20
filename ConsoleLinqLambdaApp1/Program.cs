@@ -83,6 +83,26 @@ namespace ConsoleLinqLambdaApp1
             var r14 = products.Where(p => p.Category.Id == 5).Select(p => p.Price).DefaultIfEmpty(0.0).Average();
             Console.WriteLine("Category 5 Average Prices: " + r14);
 
+            Console.WriteLine();
+
+            var r15 = products.Where(p => p.Category.Id == 1).Select(p => p.Price).Aggregate((x, y) => x + y);
+            Console.WriteLine("Category 1 Aggregate sum: " + r15);
+
+            r15 = products.Where(p => p.Category.Id == 5).Select(p => p.Price).Aggregate(0.0, (x, y) => x + y);
+            Console.WriteLine("Category 5 Aggregate sum (0.0): " + r15);
+            Console.WriteLine();
+
+            var r16 = products.GroupBy(p => p.Category);
+            foreach (IGrouping<Category, Product> group in r16)
+            {
+                Console.WriteLine("Category " + group.Key.Name + ": ");
+                foreach (Product p in group)
+                {
+                    Console.WriteLine(p);
+                }
+
+                Console.WriteLine();
+            }
 
         }
     }
