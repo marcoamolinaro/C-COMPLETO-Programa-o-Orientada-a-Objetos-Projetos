@@ -66,6 +66,13 @@ namespace ConsoleLinqLambdaApp1
 
             var r9 = products.Where(p => p.Id == 30).SingleOrDefault();
             Console.WriteLine("Single or Default test 2: " + r9);
+            Console.WriteLine();
+
+            var r10 = products.Max(p => p.Price);
+            Console.WriteLine("Max price: " + r10);
+
+            var r11 = products.Min(p => p.Price);
+            Console.WriteLine("Min price: " + r11);
         }
     }
 }
