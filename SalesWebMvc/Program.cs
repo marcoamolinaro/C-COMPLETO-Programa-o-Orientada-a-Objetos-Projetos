@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using SalesWebMvc.Data;
+using SalesWebMvc.Services;
 using System.Configuration;
 namespace SalesWebMvc
 {
@@ -28,6 +29,7 @@ namespace SalesWebMvc
             });
 
             builder.Services.AddScoped<SeedingService>();
+            builder.Services.AddScoped<SellerService>();
 
             var app = builder.Build();
 
