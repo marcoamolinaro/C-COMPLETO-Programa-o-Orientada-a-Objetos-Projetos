@@ -4,12 +4,23 @@ using Microsoft.Extensions.Options;
 using SalesWebMvc.Data;
 using SalesWebMvc.Services;
 using System.Configuration;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+
 namespace SalesWebMvc
 {
     public class Program
     {
         public static void Main(string[] args)
         {
+            var enUS = new CultureInfo("en-US");
+            var localizationOptions = new RequestLocalizationOptions
+            {
+                DefaultRequestCulture = new RequestCulture(enUS),
+                SupportedCultures = new List<CultureInfo> { enUS },
+                SupportedUICultures = new List<CultureInfo> { enUS }
+            };
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
@@ -45,6 +56,9 @@ namespace SalesWebMvc
             {
                 app.Services.CreateScope().ServiceProvider.GetRequiredService<SeedingService>().Seed();
             }
+
+
+            app.UseRequestLocalization(localizationOptions);
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
